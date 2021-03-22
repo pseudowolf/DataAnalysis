@@ -6,7 +6,7 @@ from itertools import product
 
 
 def cartesian_product(list1, list2):
-    return product(list1, list2)
+    return list(product(list1, list2))
 
 
-print(*cartesian_product(list(range(5)), ['a', 'b', 'c', 'd', 'e']))
+print(cartesian_product(list(range(5)), ['a', 'b', 'c', 'd', 'e']))
