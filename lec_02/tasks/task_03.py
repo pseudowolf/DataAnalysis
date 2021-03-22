@@ -17,4 +17,5 @@ def permutations_in(string, n):
     """
     return list(permutations(string, n))
 
+
 print(permutations_in('ABCD', 4))
