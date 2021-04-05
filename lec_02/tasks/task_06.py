@@ -1,5 +1,5 @@
 """
-Генератор, выводящий первые fn чисел Фибоначчи.
+Генератор, выводящий первые n чисел Фибоначчи.
 """
 def get_fibonacci(n):
     i = 1
@@ -12,6 +12,15 @@ def get_fibonacci(n):
             yield f2
         i += 1
 
-F = get_fibonacci(10)
+def gen_fibonacci(n):
+    """Generates a Fibonacci series up to n."""
+    a, b = 0, 1
+    while a < n:
+        yield a
+        a, b = b, a + b
 
-print(*F)
+#F = get_fibonacci(10)
+
+#print(*F)
+
+print(*gen_fibonacci(100))
